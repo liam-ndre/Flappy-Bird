@@ -42,3 +42,7 @@ pipe2 = pygame.Rect(width, 0, 40, pipe_height - 50)
 clock = pygame.time.Clock()
 pygame.init()
 screen = pygame.display.set_mode(size)
+
+running = True
+while running:
+    clock.tick(40)
