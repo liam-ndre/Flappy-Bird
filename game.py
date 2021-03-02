@@ -9,3 +9,12 @@ class Bird:
         self.y = y
         self.velocity = 5
         self. max_velocity = 5
+    
+    def up(self):
+        self.velocity = -20
+    
+    def coords(self):
+        if self.velocity < self.max_velocity:
+            self.velocity += 3
+        if self.velocity = self.max_velocity:
+            self.velocity
