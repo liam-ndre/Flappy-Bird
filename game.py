@@ -33,3 +33,12 @@ width, height = size
 
 # Initialise score
 points = 0
+
+# Initialise objects
+bird = Bird(width // 4, height // 2)
+pipe_height = random.randint(height // 4, 3 * height // 4) - 30
+pipe1 = pygame.Rect(width, pipe_height + 50, 40, height - pipe_height)
+pipe2 = pygame.Rect(width, 0, 40, pipe_height - 50)
+clock = pygame.time.Clock()
+pygame.init()
+screen = pygame.display.set_mode(size)
