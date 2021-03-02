@@ -20,4 +20,10 @@ class Bird:
             self.velocity = self.max_velocity
         self.y += self.velocity
         return self.x, self.y
-    
+
+# Set constant colours
+PIPE = (0, 255, 0)
+BACKGROUND = (0, 255, 255)
+BIRD = (255, 255, 0)
+TEXT = (0, 0, 0)
+
