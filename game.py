@@ -46,12 +46,24 @@ screen = pygame.display.set_mode(size)
 running = True
 while running:
     clock.tick(40)
+    
+    # Handle keypresses
+    for event in pygame.event.get():
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_SPACE:
+                bird.up()
+            
+            if event.type == pygame.QUIT:
+                running = False
+    
+    # Draw everything
+    screen.fill(BACKGROUND)
+    pygame.draw.circle(screen, BIRD, bird.coords(), 20)
+    pygame.draw.rect(screen, PIPE, pipe1)
+    pygame.draw.rect(screen, PIPE, pipe2)
 
-# handle keypresses
-for event in pygame.event.get():
-    if event.type == pygame.KEYDOWN:
-        if event.key == pygame.K_SPACE:
-            bird.up()
-        if event.type == pygame.QUIT:
-            running = False
+    # update pipe position
+    pipe1.move_ip(-5. 0)
+    pipe2.move_ip()
+
         
