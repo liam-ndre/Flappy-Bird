@@ -76,5 +76,11 @@ while running:
         elif pipe1.x == bird.x:
             points += 1
 
+    # reset pipe if off screen
+    if pipe1.left < 0:
+        pipe_height = random.randint(height // 4, 3 * height // 4) - 30
+        pipe1 = pygame.Rect(width, pipe_height + 50, 40, height - pipe_height)
+        pipe2 = pygame.Rect(width, 0, 40, pipe_height - 50)
+    pygame.display.update()
 
-        
+print(points)
