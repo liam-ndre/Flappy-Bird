@@ -66,4 +66,15 @@ while running:
     pipe1.move_ip(-5, 0)
     pipe2.move_ip(-5, 0)
 
+    # is bird touching ground
+    if bird.y > height - 10:
+        running = False
+
+    if -20 < bird.x - pipe1.x < 70:
+        if not(-30 < bird.y - pipe_height < 30):
+            running = False
+        elif pipe1.x == bird.x:
+            points += 1
+
+
         
