@@ -63,7 +63,7 @@ while running:
     pygame.draw.rect(screen, PIPE, pipe2)
 
     # update pipe position
-    pipe1.move_ip(-5. 0)
-    pipe2.move_ip()
+    pipe1.move_ip(-5, 0)
+    pipe2.move_ip(-5, 0)
 
         
