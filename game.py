@@ -17,4 +17,7 @@ class Bird:
         if self.velocity < self.max_velocity:
             self.velocity += 3
         if self.velocity = self.max_velocity:
-            self.velocity
+            self.velocity = self.max_velocity
+        self.y += self.velocity
+        return self.x, self.y
+    
