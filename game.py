@@ -30,3 +30,6 @@ TEXT = (0, 0, 0)
 # Set screen variables
 size = (800, 800)
 width, height = size
+
+# Initialise score
+points = 0
