@@ -46,3 +46,12 @@ screen = pygame.display.set_mode(size)
 running = True
 while running:
     clock.tick(40)
+
+# handle keypresses
+for event in pygame.event.get():
+    if event.type == pygame.KEYDOWN:
+        if event.key == pygame.K_SPACE:
+            bird.up()
+        if event.type == pygame.QUIT:
+            running = False
+        
